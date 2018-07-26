@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Useinfluence
  * Plugin URI:        https://github.com/InfluenceIO/wordpress-plugin
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Influence WordPress Plugin for TrackingId Input.
  * Version:           1.0.0
  * Author:            Target Solutions
  * Author URI:        https://useinfluence.co
@@ -94,5 +94,11 @@ function pluginAdminScreen() {
 	echo	"</a>";
   echo "<p>Please enter your TrakingID</p>";
   echo "<input type='text'></input>";
+
+	$table = "wp_table";
+	$data = $wpdb->get_results("SELECT * FROM $table WHERE 1=1", ARRAY_A);
+	echo $data;
 }
+
+
 run_useinfluence();
