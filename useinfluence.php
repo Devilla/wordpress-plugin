@@ -73,10 +73,24 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-useinfluence.php';
  *
  * @since    1.0.0
  */
+
 function run_useinfluence() {
 
 	$plugin = new Useinfluence();
 	$plugin->run();
 
+}
+add_action('admin_menu', 'basicPluginMenu');
+
+function basicPluginMenu(){
+  $appName = 'Influence Plugin';
+  $appID = 'basic-plugin';
+  add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'pluginAdminScreen');
+}
+
+function pluginAdminScreen() {
+  echo "<h1>The Influence Plugin Admin Area</h1>";
+  echo "<p>Please enter your TrakingID</p>";
+  echo "<input type='text'></input>";
 }
 run_useinfluence();
