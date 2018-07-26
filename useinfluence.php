@@ -83,8 +83,8 @@ function run_useinfluence() {
 add_action('admin_menu', 'basicPluginMenu');
 
 function basicPluginMenu(){
-  $appName = 'Influence Plugin';
-  $appID = 'basic-plugin';
+  $appName = 'UseInfluence';
+  $appID = 'influence-plugin';
   add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'pluginAdminScreen');
 }
 
