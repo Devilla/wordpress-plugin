@@ -117,7 +117,7 @@ $mydb->query($sql);
 
 $sql = "SELECT value FROM TrackingId where id=1";
 $result = $mydb->query($sql);
-echo "<h2>result : $result["value"]</h2>";
+echo '<h2>result : $result["value"]</h2>';
 }
 
 
