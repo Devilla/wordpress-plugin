@@ -93,7 +93,7 @@ function pluginAdminScreen() {
 	echo "<img class='top-logo' src='https://useinfluence.co/static/media/logo-influence-2.a5936714.png' width='180px' height='50px' style='margin-top:20px;' >";
 	echo "</a>";
 	echo "<br />";
-	echo "<a href='https://useinfluence.co'>";
+	echo "<a href='https://useinfluence.co/signup'>";
 	echo "<strong>If you don't have an account - signup here!</strong>";
 	echo "</a>";
   echo "<h2 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>Please enter your Tracking ID</h2>";
