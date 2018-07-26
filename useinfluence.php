@@ -89,11 +89,16 @@ function basicPluginMenu(){
 }
 
 function pluginAdminScreen() {
-  echo "<a href='https://useinfluence.co'>";
-	echo		"<img class='top-logo' src='logo-influence.png'>";
-	echo	"</a>";
-  echo "<p>Please enter your TrakingID</p>";
-  echo "<input type='text'></input>";
+	echo "<a href='https://useinfluence.co'>";
+	echo "<img class='top-logo' src='https://useinfluence.co/static/media/logo-influence-2.a5936714.png' width='180px' height='50px' style='margin-top:20px;' >";
+	echo "</a>";
+	echo "<br />";
+  echo "<h2 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>Please enter your Tracking ID</h2>";
+	echo "<form action='' method='POST'>";
+  echo "<input type='text' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
+	echo "<br /> <hr />";
+	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
+	echo "<form>";
 
 	$table = "wp_table";
 	$data = $wpdb->get_results("SELECT * FROM $table WHERE 1=1", ARRAY_A);
