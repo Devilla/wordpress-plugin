@@ -90,7 +90,7 @@ function basicPluginMenu(){
 
 function pluginAdminScreen() {
   echo "<a href='https://useinfluence.co'>
-				<img class='top-logo' src='/logo-influence.png'>
+				<img class='top-logo' src='logo-influence.png'>
 			</a>";
   echo "<p>Please enter your TrakingID</p>";
   echo "<input type='text'></input>";
