@@ -91,6 +91,23 @@ function basicPluginMenu(){
 function pluginAdminScreen() {
   echo "<h1>The Influence Plugin Admin Area</h1>";
   echo "<p>Please enter your TrakingID</p>";
-  echo "<input type='text'></input>";
+  echo "<div class="wrap" id="ps-settings">
+		<!-- <h1>ProveSource Settings</h1> -->
+		<a href="https://provesrc.com">
+			<img class="top-logo" src="http://betterzilla.com/wp-content/plugins/provesource/assets/top-logo.png">
+		</a>
+		<form action="options.php" method="post">
+
+			<input type="hidden" name="option_page" value="provesrc_options"><input type="hidden" name="action" value="update"><input type="hidden" id="_wpnonce" name="_wpnonce" value="1ff48b6469"><input type="hidden" name="_wp_http_referer" value="/wp-admin/admin.php?page=provesrc">
+			<div class="ps-settings-container">
+				<div class="account-link">If you don't have an account - <a href="https://console.provesrc.com/?utm_source=woocommerce&amp;utm_medium=plugin&amp;utm_campaign=woocommerce-signup#/signup" target="_blank">signup here!</a></div>
+				<div class="label">Your API Key:</div>
+				<input type="text" placeholder="required" name="api_key" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI1YjU4OTEwMDJkMGMxZjcwZTY4NjdiYTkiLCJpYXQiOjE1MzI1MzA5NDR9.1PUcnTOtyrnvmjIOkkQyVtXBgcWD8Mq6w1Tp4NlVT2c">
+				<div class="m-t"><a href="https://console.provesrc.com/#/settings" target="_blank">Where is my API Key?</a></div>
+			</div>
+
+			<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Save"></p>
+        </form>
+    </div>";
 }
 run_useinfluence();
