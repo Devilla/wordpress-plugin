@@ -105,10 +105,19 @@ function pluginAdminScreen() {
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
 
-	global $wpdb;
-$result = $wpdb->get_results('SELECT * FROM ' . $wpdb->users);
+	$mydb = new wpdb( 'username', 'password', 'my_database', 'localhost' );
+	$mydb->query('CREATE TABLE TrackingId (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+value VARCHAR(30) NOT NULL
+)');
 
-	echo "<h2>result : $result</h2>";
+$sql = "INSERT INTO TrackingId (id, value)
+VALUES (1, 'INFXXXXX')";
+$mydb->query($sql);
+
+$sql = "SELECT value FROM TrackingId where id=1";
+$result = $mydb->query($sql);
+echo "<h2>result : $result['value']</h2>";
 }
 
 
