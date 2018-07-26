@@ -93,22 +93,22 @@ function pluginAdminScreen() {
 	echo "<img class='top-logo' src='https://useinfluence.co/static/media/logo-influence-2.a5936714.png' width='180px' height='50px' style='margin-top:20px;' >";
 	echo "</a>";
 	echo "<br />";
-	echo "<h2 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -";
+	echo "<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -";
 	echo "<a href='https://useinfluence.co/signup'>";
 	echo "<strong>signup here!</strong>";
 	echo "</a>";
-	echo "</h2>";
-	echo "<h1>Please enter your Tracking ID</h1>";
+	echo "</h3>";
+	echo "<h2>Please enter your Tracking ID</h2>";
 	echo "<form action='' method='POST'>";
   echo "<input type='text' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
 	echo "<br /> <hr />";
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
 
-	$table = "wp_table";
-	$data = $wpdb->get_results("SELECT * FROM $table WHERE 1=1", ARRAY_A);
-	echo "data : "+$data;
-	echo "table : "+$table;
+	global $wpdb;
+$result = $wpdb->get_results('SELECT * FROM wp_posts LIMIT 10');
+
+	echo "<h2>result : $result</h2>";
 }
 
 
