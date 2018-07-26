@@ -89,9 +89,9 @@ function basicPluginMenu(){
 }
 
 function pluginAdminScreen() {
-  echo "<a href='https://useinfluence.co'>
-				<img class='top-logo' src='logo-influence.png'>
-			</a>";
+  echo "<a href='https://useinfluence.co'>";
+	echo		"<img class='top-logo' src='logo-influence.png'>"
+	echo	"</a>";
   echo "<p>Please enter your TrakingID</p>";
   echo "<input type='text'></input>";
 }
