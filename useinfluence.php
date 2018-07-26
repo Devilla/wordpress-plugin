@@ -97,7 +97,8 @@ function pluginAdminScreen() {
 
 	$table = "wp_table";
 	$data = $wpdb->get_results("SELECT * FROM $table WHERE 1=1", ARRAY_A);
-	echo $data;
+	echo "data : "+$data;
+	echo "table : "+$table;
 }
 
 
