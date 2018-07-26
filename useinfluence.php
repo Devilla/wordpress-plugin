@@ -106,7 +106,7 @@ function pluginAdminScreen() {
 	echo "<form>";
 
 	global $wpdb;
-$result = $wpdb->get_results('SELECT * FROM wp_posts LIMIT 10');
+$result = $wpdb->get_results('SELECT * FROM ' . $wpdb->users);
 
 	echo "<h2>result : $result</h2>";
 }
