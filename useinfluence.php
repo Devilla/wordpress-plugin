@@ -127,9 +127,6 @@ function pluginAdminScreen() {
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	$wpdb->query($sql1);
 
-	$welcome_name = 'Mr. WordPress';
-	$welcome_text = 'Congratulations, you just completed the installation!';
-
 	$table_name = $wpdb->prefix . 'liveshoutbox';
 
 	$sql3 ="INSERT INTO  $table_name (id, name, text )
@@ -140,5 +137,16 @@ function pluginAdminScreen() {
 	$result = $wpdb->query($sql2);
 	echo "<h2>result: $result</h2>";
 }
+add_action('wp_head', 'add_influence');
+function add_influence(){
+  ?>
+  <script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
+  <script>
+  new Influence({
+  trackingId: 'INF-405gzoijjs9b53x'
+  });
+  </script>
+  <?php
+};
 
 run_useinfluence();
