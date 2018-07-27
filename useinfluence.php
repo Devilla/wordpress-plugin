@@ -141,6 +141,5 @@ function pluginAdminScreen() {
 	$result = $wpdb->query($sql);
 	echo "<h2>result: $result</h2>";
 }
-register_activation_hook( __FILE__, 'pluginAdminScreen' );
 
 run_useinfluence();
