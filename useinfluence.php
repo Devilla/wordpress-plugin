@@ -105,45 +105,20 @@ function pluginAdminScreen() {
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
 
-	$name = $_POST["name"];
+	global $name = $_POST["name"];
 
 	echo "<p>Tracking ID : $name<p>";
 
-	global $wpdb;
-
-	$table_name = $wpdb->prefix . "liveshoutbox";
-
-	$charset_collate = $wpdb->get_charset_collate();
-
-	$sql1 = "CREATE TABLE $table_name (
-	  id mediumint(9) NOT NULL AUTO_INCREMENT,
-	  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
-	  name tinytext NOT NULL,
-	  text text NOT NULL,
-	  url varchar(55) DEFAULT '' NOT NULL,
-	  PRIMARY KEY  (id)
-	) $charset_collate;";
-
-	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-	$wpdb->query($sql1);
-
-	$table_name = $wpdb->prefix . 'liveshoutbox';
-
-	$sql3 ="INSERT INTO  $table_name (id, name, text )
-	        VALUES (1,'Mr. WordPress', 'Congratulations, you just completed the installation!' )";
-	$wpdb->query($sql3);
-
-	$sql2 = "SELECT name FROM $table_name";
-	$result = $wpdb->query($sql2);
-	echo "<h2>result: $result</h2>";
 }
+
 add_action('wp_head', 'add_influence');
+
 function add_influence(){
   ?>
   <script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
   <script>
   new Influence({
-  trackingId: 'INF-405gzoijjs9b53x'
+  trackingId: $name
   });
   </script>
   <?php
