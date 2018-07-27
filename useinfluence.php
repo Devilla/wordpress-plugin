@@ -107,8 +107,8 @@ function pluginAdminScreen() {
 
 	global $wpdb;
 
-	$post_id    = 1234567;
-	$meta_key   = 4567890;
+	$post_id    = '1234567';
+	$meta_key   = '4567890';
 	$meta_value = "TrackingId";
 
 	$wpdb->query("INSERT INTO  $wpdb->postmeta
@@ -116,7 +116,7 @@ function pluginAdminScreen() {
 	                VALUES ( $post_id, $meta_key, $meta_value )"
 	            );
 
-	$sql = "SELECT * FROM $wpdb->postmeta where $post_id=1";
+	$sql = "SELECT * FROM $wpdb->postmeta where $post_id='11234567'";
 	$result = $wpdb->query($sql);
 	echo "<h2>result: $result</h2>";
 }
