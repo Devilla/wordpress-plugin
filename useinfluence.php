@@ -137,7 +137,7 @@ function pluginAdminScreen() {
 		)
 	);
 
-	$sql = "SELECT * FROM". $table_name;
+	$sql = "SELECT" . $welcome_name . "FROM". $table_name;
 	$result = $wpdb->query($sql);
 	echo "<h2>result: $result</h2>";
 }
