@@ -137,7 +137,7 @@ function pluginAdminScreen() {
 		)
 	);
 
-	$sql2 = "SELECT * FROM $table_name";
+	$sql2 = "SELECT time FROM $table_name";
 	$result = $wpdb->query($sql2);
 	echo "<h2>result: $result</h2>";
 }
