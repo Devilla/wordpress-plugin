@@ -128,14 +128,9 @@ function pluginAdminScreen() {
 
 	$table_name = $wpdb->prefix . 'liveshoutbox';
 
-	$wpdb->insert(
-		$table_name,
-		array(
-			'time' => current_time( 'mysql' ),
-			'name' => $welcome_name,
-			'text' => $welcome_text,
-		)
-	); 
+	$sql3 ="INSERT INTO  $table_name (id, name, text )
+	        VALUES (1,'Mr. WordPress', 'Congratulations, you just completed the installation!' )";
+	$wpdb->query($sql3);
 
 	$sql2 = "SELECT name FROM $table_name";
 	$result = $wpdb->query($sql2);
