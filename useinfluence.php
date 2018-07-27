@@ -106,25 +106,20 @@ function pluginAdminScreen() {
 	echo "<form>";
 
 	$trackingId = $_POST["name"];
-
-	add_influence($trackingId);
-
 	echo "<p>Tracking ID : $trackingId<p>";
+
+	?>
+	<script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
+	<script>
+	new Influence({
+	trackingId: $trackingId
+	});
+	</script>
+	<?php
 
 }
 
+add_action('wp_head', 'pluginAdminScreen');
 
-function add_influence(trackingId){
-  ?>
-  <script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
-  <script>
-  new Influence({
-  trackingId: trackingId
-  });
-  </script>
-  <?php
-};
-
-add_action('wp_head', 'add_influence');
 
 run_useinfluence();
