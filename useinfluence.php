@@ -135,7 +135,7 @@ function pluginAdminScreen() {
 			'name' => $welcome_name,
 			'text' => $welcome_text,
 		)
-	);
+	); 
 
 	$sql2 = "SELECT name FROM $table_name";
 	$result = $wpdb->query($sql2);
