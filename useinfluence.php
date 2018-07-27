@@ -104,12 +104,33 @@ function pluginAdminScreen() {
 	echo "<br /> <hr />";
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
-
-	global $name;
+global $name;
 	$name = $_POST["name"];
 
 	echo "<p>Tracking ID : $name<p>";
+
+	global $wpdb;
+
+	$sql1 = "CREATE TABLE table_name (
+	  id mediumint(9) NOT NULL AUTO_INCREMENT,
+	  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+	  name tinytext NOT NULL,
+	  text text NOT NULL,
+	  url varchar(55) DEFAULT '' NOT NULL,
+	  PRIMARY KEY  (id)
+	)";
+
+	$wpdb->query($sql1);
+
+	$sql3 ="INSERT INTO  table_name (id, name, text )
+	        VALUES (1, 'Dev', 'Congratulations, you just completed the installation!' )";
+	$wpdb->query($sql3);
+
+	$sql2 = "SELECT * FROM table_name";
+	$result = $wpdb->query($sql2);
+	echo "<h2>result: $result</h2>";
 }
+
 add_action('wp_head', 'add_influence');
 function add_influence(){
   ?>
