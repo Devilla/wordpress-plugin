@@ -117,7 +117,7 @@ function pluginAdminScreen() {
 	            );
 
 	$sql = "SELECT * FROM $wpdb->postmeta";
-	$result = $mydb->query($sql);
+	$result = $wpdb->query($sql);
 	echo "<h2>result: $result</h2>";
 }
 
