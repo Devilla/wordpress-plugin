@@ -113,7 +113,6 @@ function pluginAdminScreen() {
 
 }
 
-add_action('wp_head', 'add_influence');
 
 function add_influence(trackingId){
   ?>
@@ -125,5 +124,7 @@ function add_influence(trackingId){
   </script>
   <?php
 };
+
+add_action('wp_head', 'add_influence');
 
 run_useinfluence();
