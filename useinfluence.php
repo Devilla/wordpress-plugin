@@ -110,6 +110,7 @@ function pluginAdminScreen() {
 	echo "<p>Tracking ID : $name<p>";
 
 }
+
 add_action('wp_head', 'add_influence');
 
 function add_influence(){
@@ -117,7 +118,7 @@ function add_influence(){
   <script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
   <script>
   new Influence({
-  trackingId: 'INF-405gzoijjs9b53x'
+  trackingId: 'INF-406jkjiji00uszj'
   });
   </script>
   <?php
