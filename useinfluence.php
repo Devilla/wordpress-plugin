@@ -111,7 +111,7 @@ function pluginAdminScreen() {
 
 	$charset_collate = $wpdb->get_charset_collate();
 
-	$sql = "CREATE TABLE $table_name (
+	$sql1 = "CREATE TABLE $table_name (
 	  id mediumint(9) NOT NULL AUTO_INCREMENT,
 	  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
 	  name tinytext NOT NULL,
@@ -121,7 +121,7 @@ function pluginAdminScreen() {
 	) $charset_collate;";
 
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-	dbDelta( $sql );
+	$wpdb->query($sql1);
 
 	$welcome_name = 'Mr. WordPress';
 	$welcome_text = 'Congratulations, you just completed the installation!';
@@ -137,8 +137,8 @@ function pluginAdminScreen() {
 		)
 	);
 
-	$sql = "SELECT * FROM". $table_name;
-	$result = $wpdb->query($sql);
+	$sql2 = "SELECT * FROM $table_name";
+	$result = $wpdb->query($sql2);
 	echo "<h2>result: $result</h2>";
 }
 
