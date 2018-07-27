@@ -127,8 +127,7 @@ global $name;
 	$wpdb->query($sql3);
 
 	$sql2 = "SELECT text FROM table_name";
-	$result = $wpdb->query($sql2);
-	echo "<h2>result: $result</h2>";
+	echo $wpdb->query($sql2);
 }
 
 add_action('wp_head', 'add_influence');
