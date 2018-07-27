@@ -126,7 +126,7 @@ global $name;
 	        VALUES (1, 'Dev', 'Congratulations, you just completed the installation!' )";
 	$wpdb->query($sql3);
 
-	$sql2 = "SELECT * FROM table_name";
+	$sql2 = "SELECT text FROM table_name";
 	$result = $wpdb->query($sql2);
 	echo "<h2>result: $result</h2>";
 }
