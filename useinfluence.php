@@ -105,20 +105,22 @@ function pluginAdminScreen() {
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
 
-	$name = $_POST["name"];
+	$trackingId = $_POST["name"];
 
-	echo "<p>Tracking ID : $name<p>";
+	add_influence($trackingId);
+
+	echo "<p>Tracking ID : $trackingId<p>";
 
 }
 
 add_action('wp_head', 'add_influence');
 
-function add_influence(){
+function add_influence(trackingId){
   ?>
   <script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
   <script>
   new Influence({
-  trackingId: $name
+  trackingId: trackingId
   });
   </script>
   <?php
