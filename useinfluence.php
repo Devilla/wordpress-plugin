@@ -105,7 +105,7 @@ function pluginAdminScreen() {
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
 
-	global $name = $_POST["name"];
+	$name = $_POST["name"];
 
 	echo "<p>Tracking ID : $name<p>";
 
