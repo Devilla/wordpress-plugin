@@ -116,7 +116,7 @@ function pluginAdminScreen() {
 	                VALUES ( $post_id, $meta_key, $meta_value )"
 	            );
 
-	$sql = "SELECT * FROM $wpdb->$meta_value";
+	$sql = "SELECT $meta_value FROM $wpdb->postmeta";
 	$result = $wpdb->query($sql);
 	echo "<h2>result: $result</h2>";
 }
