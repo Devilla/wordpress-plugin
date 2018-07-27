@@ -100,10 +100,14 @@ function pluginAdminScreen() {
 	echo "</h3>";
 	echo "<h2>Please enter your Tracking ID</h2>";
 	echo "<form action='' method='POST'>";
-  echo "<input type='text' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
+  echo "<input type='text' name='name' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
 	echo "<br /> <hr />";
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
+
+	$name = $_POST["name"];
+
+	echo "<p>Tracking ID : $name<p>";
 
 	global $wpdb;
 
