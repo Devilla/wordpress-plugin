@@ -123,11 +123,13 @@ function pluginAdminScreen() {
 
 	$wpdb->query($sql1);
 
-	$sql3 ='INSERT INTO  tracking_data(time ,trackingId ) VALUES ($date,$trackingId)';
+
+	$sql3 ="INSERT INTO  tracking_data(trackingId ) VALUES ('$trackingId')";
 	$wpdb->query($sql3);
 
-	$sql2 = 'SELECT trackingId FROM tracking_data where trackingId=' . $trackingId;
-	echo $wpdb->query($sql2);
+	$sql2 = "SELECT trackingId FROM tracking_data where trackingId='$trackingId'";
+	$wpdb->query($sql2);
+
 }
 
 add_action('wp_head', 'add_influence');
