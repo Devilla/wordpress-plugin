@@ -100,33 +100,34 @@ function pluginAdminScreen() {
 	echo "</h3>";
 	echo "<h2>Please enter your Tracking ID</h2>";
 	echo "<form action='' method='POST'>";
-  echo "<input type='text' name='name' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
+  echo "<input type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
 	echo "<br /> <hr />";
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
-global $name;
-	$name = $_POST["name"];
 
-	echo "<p>Tracking ID : $name<p>";
+  global $trackingId;
+	$trackingId = $_POST["trackingId"];
+
+	echo "<p>Tracking ID : $trackingId<p>";
 
 	global $wpdb;
 
-	$sql1 = "CREATE TABLE table_name (
+	$sql1 = "CREATE TABLE tracking_data (
 	  id mediumint(9) NOT NULL AUTO_INCREMENT,
 	  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
-	  name tinytext NOT NULL,
-	  text text NOT NULL,
-	  url varchar(55) DEFAULT '' NOT NULL,
+	  trackingId varchar(16) NOT NULL,
 	  PRIMARY KEY  (id)
 	)";
 
+	$date = date("Y-m-d") + date("h:i:sa");
+
 	$wpdb->query($sql1);
 
-	$sql3 ="INSERT INTO  table_name (id, name, text )
-	        VALUES (1, 'Dev', 'Congratulations, you just completed the installation!' )";
+	$sql3 ="INSERT INTO  table_name ($date,trackingId )
+	        VALUES ($date, $trackingId)";
 	$wpdb->query($sql3);
 
-	$sql2 = "SELECT text FROM table_name";
+	$sql2 = "SELECT trackingId FROM table_name" where trackingId=$trackingId";
 	echo $wpdb->query($sql2);
 }
 
@@ -137,7 +138,7 @@ function add_influence(){
   <script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
   <script>
   new Influence({
-  trackingId: 'INF-406jkjiji00uszj'
+  trackingId: $trackingId
   });
   </script>
   <?php
