@@ -80,13 +80,27 @@ function run_useinfluence() {
 	$plugin->run();
 
 }
+
+/**
+ * The hook action to register plugin menu  method.
+ */
 add_action('admin_menu', 'basicPluginMenu');
+
+/**
+ * The core plugin menu  method that is used to define app name app id etc,
+ * admin-control and public-facing.
+ */
 
 function basicPluginMenu(){
   $appName = 'UseInfluence';
   $appID = 'influence-plugin';
   add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'pluginAdminScreen');
 }
+
+/**
+ * The core pluginAdminScreen method that is used to define trackingId as input for app,
+ */
+
 
 function pluginAdminScreen() {
 	echo "<a href='https://useinfluence.co'>";
@@ -109,7 +123,9 @@ function pluginAdminScreen() {
 	 $trackingId='INF-XXXXXX';
 	$trackingId = $_POST["trackingId"];
 
-
+	/**
+	 * WordPress database queries
+		*/
 
 	global $wpdb;
 
@@ -130,6 +146,10 @@ function pluginAdminScreen() {
 }
 
 add_action('wp_head', 'add_influence');
+
+/**
+ * The script tag header paste method which retreives user trakingId from database and pass to script,
+ */
 
 function add_influence(){
 	global $wpdb;
