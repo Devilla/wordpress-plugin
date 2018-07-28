@@ -128,7 +128,7 @@ function pluginAdminScreen() {
 	$wpdb->query($sql3);
 
 	$sql2 = "SELECT trackingId FROM table_name where trackingId=$trackingId";
-	echo $wpdb->query($sql2);
+	echo "result : " + $wpdb->query($sql2);
 }
 
 add_action('wp_head', 'add_influence');
