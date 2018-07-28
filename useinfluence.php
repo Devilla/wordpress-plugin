@@ -127,7 +127,7 @@ function pluginAdminScreen() {
 	        VALUES ($date, $trackingId)";
 	$wpdb->query($sql3);
 
-	$sql2 = "SELECT trackingId FROM table_name" where trackingId=$trackingId";
+	$sql2 = "SELECT trackingId FROM table_name where trackingId=$trackingId";
 	echo $wpdb->query($sql2);
 }
 
