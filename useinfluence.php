@@ -105,10 +105,11 @@ function pluginAdminScreen() {
 	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
 	echo "<form>";
 
-  global $trackingId;
+ 	 global $trackingId;
+	 $trackingId='INF-XXXXXX';
 	$trackingId = $_POST["trackingId"];
 
-	echo "<p>Tracking ID : $trackingId<p>";
+
 
 	global $wpdb;
 
@@ -119,30 +120,28 @@ function pluginAdminScreen() {
 	  PRIMARY KEY  (id)
 	)";
 
-	$date = date("Y-m-d") + date("h:i:sa");
-
 	$wpdb->query($sql1);
-
 
 	$sql3 ="INSERT INTO  tracking_data(trackingId ) VALUES ('$trackingId')";
 	$wpdb->query($sql3);
 
 	$sql2 = "SELECT trackingId FROM tracking_data where trackingId='$trackingId'";
-	$wpdb->query($sql2);
-
+	echo $wpdb->query($sql2);
 }
 
 add_action('wp_head', 'add_influence');
 
 function add_influence(){
-  ?>
-  <script src="https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js"> </script>
-  <script>
-  new Influence({
-  trackingId: $trackingId
-  });
-  </script>
-  <?php
+	global $wpdb;
+	$trackingId = $wpdb->get_results("SELECT trackingId FROM tracking_data where trackingId='2'", ARRAY_N);
+	echo "
+	<script src='https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js'> </script>
+	<script>
+	new Influence({
+	trackingId: 'INF-406jkjiji00uszj'
+	});
+	</script>
+			 ";
 };
 
 run_useinfluence();
