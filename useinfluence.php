@@ -123,7 +123,7 @@ function pluginAdminScreen() {
 
 	$wpdb->query($sql1);
 
-	$sql3 ='INSERT INTO  tracking_data (' . $date . ',trackingId ) VALUES (' .$date. ',' . $trackingId)";
+	$sql3 ='INSERT INTO  tracking_data (' . $date . ',trackingId ) VALUES (' .$date. ',' . $trackingId)';
 	$wpdb->query($sql3);
 
 	$sql2 = 'SELECT trackingId FROM tracking_data where trackingId=' . $trackingId;
