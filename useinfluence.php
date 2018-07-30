@@ -165,7 +165,7 @@ function add_influence(){
 				<script src='https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js'> </script>
 				<script>
 				new Influence({
-				trackingId: 'INF-405gzoijjr5ckll'
+				trackingId: '$trackingId'
 				});
 				</script>
 						 ";
