@@ -10,10 +10,10 @@
  *
  * @link              https://useinfluence.co
  * @since             1.0.0
- * @package           Useinfluence
+ * @package           Influence
  *
  * @wordpress-plugin
- * Plugin Name:       Useinfluence
+ * Plugin Name:       Influence
  * Plugin URI:        https://github.com/InfluenceIO/wordpress-plugin
  * Description:       Influence WordPress Plugin for TrackingId Input.
  * Version:           1.0.0
@@ -84,17 +84,17 @@ function run_useinfluence() {
 /**
  * The hook action to register plugin menu  method.
  */
-add_action('admin_menu', 'basicPluginMenu');
+add_action('admin_menu', 'basic_plugin_menu');
 
 /**
  * The core plugin menu  method that is used to define app name app id etc,
  * admin-control and public-facing.
  */
 
-function basicPluginMenu(){
+function basic_plugin_menu(){
   $appName = 'UseInfluence';
   $appID = 'influence-plugin';
-  add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'pluginAdminScreen');
+  add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'plugin_admin_screen');
 }
 
 /**
@@ -102,7 +102,7 @@ function basicPluginMenu(){
  */
 
 
-function pluginAdminScreen() {
+function plugin_admin_screen() {
 	echo "<a href='https://useinfluence.co'>";
 	echo "<img class='top-logo' src='https://useinfluence.co/static/media/logo-influence-2.a5936714.png' width='180px' height='50px' style='margin-top:20px;' >";
 	echo "</a>";
@@ -120,7 +120,7 @@ function pluginAdminScreen() {
 	echo "<form>";
 
  	 global $trackingId;
-	 $trackingId='INF-XXXXXX';
+	$trackingId='INF-XXXXXX';
 	$trackingId = $_POST["trackingId"];
 
 	/**
@@ -165,7 +165,7 @@ function add_influence(){
 				<script src='https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js'> </script>
 				<script>
 				new Influence({
-				trackingId: '$trackingId'
+				trackingId: 'INF-405gzoijjr5ckll'
 				});
 				</script>
 						 ";
