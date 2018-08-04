@@ -120,14 +120,24 @@ function plugin_admin_screen() {
 	echo "<form>";
 
  	 global $trackingId;
-	$trackingId='INF-XXXXXX';
-	$trackingId = $_POST["trackingId"];
+	 global $wpdb;
+
+	 $query = $wpdb->get_results("SELECT trackingId FROM tracking_id", OBJECT);
+	 foreach($query as $row)
+	 {
+				 $trackingId = $row->trackingId;
+	 }
+
+	 if($_POST["trackingId"]!=''){
+			$trackingId = $_POST["trackingId"];
+	  	$date = date("Y-m-d h:i:s");
+			}
 
 	/**
 	 * WordPress database queries
 		*/
 
-	global $wpdb;
+
 
 	$sql1 = "CREATE TABLE tracking_id (
 	  id mediumint(9) NOT NULL AUTO_INCREMENT,
@@ -138,7 +148,7 @@ function plugin_admin_screen() {
 
 	$wpdb->query($sql1);
 
-	$sql3 ="INSERT INTO  tracking_id(trackingId ) VALUES ('$trackingId')";
+	$sql3 ="INSERT INTO  tracking_id(time, trackingId ) VALUES ('$date', '$trackingId')";
 	$wpdb->query($sql3);
 
 	$sql2 = "SELECT trackingId FROM tracking_id where trackingId='$trackingId'";
@@ -154,22 +164,18 @@ add_action('wp_head', 'add_influence');
 function add_influence(){
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id", OBJECT);
-	$count=0;
 	foreach($query as $row)
-	{	$count++;
-		if($count==1)
-			{
-
+	{
 				$trackingId = $row->trackingId;
-					echo "
-				<script src='https://storage.cloud.google.com/influence-197607.appspot.com/influence-analytics.js'> </script>
+	}
+				echo "
+				<script src='https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js'> </script>
 				<script>
 				new Influence({
 				trackingId: '$trackingId'
 				});
 				</script>
 						 ";
-			}
 	}
 };
 
