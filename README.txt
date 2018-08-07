@@ -26,9 +26,8 @@ Alter look and feel, position, timing, pages to show and that's only the tip of 
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+How to install the plugin and get it working.
 
-e.g.
 
 1. Upload `useinfluence.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
@@ -39,13 +38,37 @@ UseInfluence infuse the Influence javascript code to your site, to show popup no
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+What's the cost? 
 
-An answer to that question.
+Evaluating begins at $0 every month, so you can appreciate every one of the advantages with zero cost. 
 
-= What about foo bar? =
+= How might I drop my membership? =
 
-Answer to foo bar dilemma.
+You can drop your membership whenever. Get in touch with us through our site or email (info@provesrc.com) and we'll help. 
+
+= Establishment Instructions = 
+
+UseInfluence module establishment is as more or less simple, works with both WordPress and WooCommerce on your sites. 
+
+UseInfluence is a membership benefit, beginning at $0 every month (it's hard to believe, but it's true we offer a free arrangement), membership administration is accessible in the UseInfluence site (tap the logo in the settings page). 
+
+Guidelines: 
+
+Introduce the module through the WordPress modules screen OR unzup the module document to '/wp-content/modules' 
+
+In the WordPress 'Modules' page, initiate the module. 
+
+Select "Influence" menu thing on the sidebar. 
+
+Duplicate over your Tracking ID from UseInfluence dashboard and hit "Save". 
+
+In the UseInfluence dashboard hit "New Notification" and take after the wizard to make a "Stream" WooCommerce notice. 
+
+Done. Kick back and observe how social confirmation helps your deals! 
+
+Notice: 
+
+UseInfluence infuse the Influence javascript code to your site, to show popups. 
 
 == Screenshots ==
 
