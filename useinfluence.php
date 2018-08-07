@@ -151,7 +151,7 @@ function plugin_admin_screen() {
 	$wpdb->query($sql3);
 
 	$sql2 = "SELECT trackingId FROM tracking_id where trackingId='$trackingId'";
-	echo $wpdb->query($sql2);
+	$wpdb->query($sql2);
 }
 
 add_action('wp_head', 'add_influence');
