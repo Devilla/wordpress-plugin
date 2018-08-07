@@ -130,7 +130,6 @@ function plugin_admin_screen() {
 
 	 if($_POST["trackingId"]!=''){
 			$trackingId = $_POST["trackingId"];
-	  	$date = date("Y-m-d h:i:s");
 			}
 
 	/**
@@ -148,7 +147,7 @@ function plugin_admin_screen() {
 
 	$wpdb->query($sql1);
 
-	$sql3 ="INSERT INTO  tracking_id(time, trackingId ) VALUES ('$date', '$trackingId')";
+	$sql3 ="INSERT INTO  tracking_id(trackingId ) VALUES ('$trackingId')";
 	$wpdb->query($sql3);
 
 	$sql2 = "SELECT trackingId FROM tracking_id where trackingId='$trackingId'";
@@ -178,7 +177,6 @@ function add_influence(){
 				</script>
 						 ";
 	}
-};
 
 run_useinfluence();
 
