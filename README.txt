@@ -34,41 +34,41 @@ How to install the plugin and get it working.
 1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
 
 Note: 
-UseInfluence infuse the Influence javascript code to your site, to show popup notifications.
+UseInfluence infuses the unique Pixel code into your website to show popup notifications.
 
 == Frequently Asked Questions ==
 
 What's the cost? 
 
-Evaluating begins at $0 every month, so you can appreciate every one of the advantages with zero cost. 
+We have four plans, each with 7 days free trial. Depending on your website's traffic you can choose from 'Startup-$17', 'Small Business-48'
 
 = How might I drop my membership? =
 
-You can drop your membership whenever. Get in touch with us through our site or email (info@provesrc.com) and we'll help. 
+You can giveup your membership whenever you feel like. Get in touch with us through our website or email (info@useinfluence.co). 
 
-= Establishment Instructions = 
 
-UseInfluence module establishment is as more or less simple, works with both WordPress and WooCommerce on your sites. 
+= Installation Guide = 
 
-UseInfluence is a membership benefit, beginning at $0 every month (it's hard to believe, but it's true we offer a free arrangement), membership administration is accessible in the UseInfluence site (tap the logo in the settings page). 
+Installing Influence is a 5 minute job, & it works great with both WordPress and WooCommerce sites. 
+
 
 Guidelines: 
 
-Introduce the module through the WordPress modules screen OR unzup the module document to '/wp-content/modules' 
+Introduce the module through the WordPress modules screen OR unzip the module document to '/wp-content/modules' 
 
 In the WordPress 'Modules' page, initiate the module. 
 
 Select "Influence" menu thing on the sidebar. 
 
-Duplicate over your Tracking ID from UseInfluence dashboard and hit "Save". 
+Copy the "Tracking ID" of your website's campaign (Install Pixel section), inside the Influene dashboard, then click Save.
 
-In the UseInfluence dashboard hit "New Notification" and take after the wizard to make a "Stream" WooCommerce notice. 
+Verify your Pixel status inside the Influence Dashboard, it should show 'Verified'.
 
-Done. Kick back and observe how social confirmation helps your deals! 
+All set? Now sit back & see the conversions shoot-up.
 
-Notice: 
+Note: 
 
-UseInfluence infuse the Influence javascript code to your site, to show popups. 
+UseInfluence installs a unique pixel code into your website to do all the amazing stuff. 
 
 == Changelog ==
 
