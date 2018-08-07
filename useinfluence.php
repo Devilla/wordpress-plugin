@@ -162,6 +162,7 @@ add_action('wp_head', 'add_influence');
  */
 
 function add_influence(){
+	global $trackingId;
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id", OBJECT);
 	foreach($query as $row)
