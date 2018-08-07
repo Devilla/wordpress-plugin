@@ -92,7 +92,7 @@ add_action('admin_menu', 'basic_plugin_menu');
  */
 
 function basic_plugin_menu(){
-  $appName = 'UseInfluence';
+  $appName = 'Influence';
   $appID = 'influence-plugin';
   add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'plugin_admin_screen');
 }
