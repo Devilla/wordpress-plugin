@@ -122,7 +122,7 @@ function plugin_admin_screen() {
  	 global $trackingId;
 	 global $wpdb;
 
-	 $query = $wpdb->get_results("SELECT trackingId FROM tracking_id", OBJECT);
+	 $query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
 	 foreach($query as $row)
 	 {
 				 $trackingId = $row->trackingId;
@@ -147,11 +147,8 @@ function plugin_admin_screen() {
 
 	$wpdb->query($sql1);
 
-	$sql3 ="INSERT INTO  tracking_id(trackingId ) VALUES ('$trackingId')";
+	$sql3 ="INSERT INTO  tracking_id(trackingId) VALUES ('$trackingId')";
 	$wpdb->query($sql3);
-
-	$sql2 = "SELECT trackingId FROM tracking_id where trackingId='$trackingId'";
-	$wpdb->query($sql2);
 }
 
 add_action('wp_head', 'add_influence');
@@ -163,7 +160,7 @@ add_action('wp_head', 'add_influence');
 function add_influence(){
 	global $trackingId;
 	global $wpdb;
-	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id", OBJECT);
+	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
 	foreach($query as $row)
 	{
 				$trackingId = $row->trackingId;
