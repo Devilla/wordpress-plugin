@@ -70,11 +70,6 @@ Notice:
 
 UseInfluence infuse the Influence javascript code to your site, to show popups. 
 
-== Screenshots ==
-
-1. UseInfluence website and popup notification.
-2. UseInfluence dashboard.
-
 == Changelog ==
 
 = 1.0 =
