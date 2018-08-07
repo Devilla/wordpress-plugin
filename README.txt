@@ -12,21 +12,20 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 == Description ==
 
-UseInfluence use various features and tecniques impacts to turn your site to a more powerful and intriguing spot for your clients and an enhances your deal. 
+UseInfluence uses 'Social Proof Notifications' to give a conversion BOOST to your website's traffic. Our realtime notifications puts a stamp of Social Proofing on your existing business/website, and eventually creates a feeling of trust in your website visitors. 
 
-UseInfluence is a social verification stage for sites that show warnings about positive client cooperations in the site, for example, ongoing buys and information exchanges. 
+Influence Notifications - These are classified into 'Recent User Activity' & 'Live Visitor Activity'. You can set the 'Styles' & 'Behaviors' of your notification popups inside the dashboard. Everything is fully customizeable!
 
-Make social evidence to demonstrate page guests, ongoing information exchanges, late buys and the sky is the limit from there. 
+Influence Analytics - Inside the dashboard you can also monitor your website-user's analytics, conversion % & many other metrics.
 
-Backings in excess of 15 dialects and tallying! 
+Websites have seen over 200% conversion improvements after installing 'Influence'.
 
-Delightful notices, including portable help. 
+More conversion-boosting Beta features are in the pipeline. Keep your seatbelts tight & get your Influence account now!
 
-Alter look and feel, position, timing, pages to show and that's only the tip of the iceberg.
 
 == Installation ==
 
-How to install the plugin and get it working.
+How to install the plugin and get it working?
 
 
 1. Upload `useinfluence.php` to the `/wp-content/plugins/` directory
@@ -34,15 +33,17 @@ How to install the plugin and get it working.
 1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
 
 Note: 
-UseInfluence infuses the unique Pixel code into your website to show popup notifications.
+UseInfluence infuses a unique Pixel code into your website to show popup notifications.
 
 == Frequently Asked Questions ==
 
 What's the cost? 
 
-We have four plans, each with 7 days free trial. Depending on your website's traffic you can choose from 'Startup-$17', 'Small Business-48'
+We have four plans, each with 7 days free trial. Depending on your website's traffic you can choose from 'Startup ($17)', 'Small Business ($48)', 'Advanced ($86)' & 'Enterprise ($171)'.
+With Yearly plans purchase you just have to pay for 10 months, i.e. 2 Months Free.
 
-= How might I drop my membership? =
+
+= How do I revoke my Influence membership? =
 
 You can giveup your membership whenever you feel like. Get in touch with us through our website or email (info@useinfluence.co). 
 
