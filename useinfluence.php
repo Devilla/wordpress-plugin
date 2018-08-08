@@ -131,7 +131,7 @@ function influence_screen() {
 	 if(!preg_match("/INF-/", $trackingId)){
 			$trackingId = '';
 		}
-		
+
 	 if($_POST["trackingId"]!=''){
 			$trackingId = $_POST["trackingId"];
 			}
@@ -150,9 +150,10 @@ function influence_screen() {
 	)";
 
 	$wpdb->query($sql1);
-
-	$sql3 ="INSERT INTO  tracking_id(trackingId) VALUES ('$trackingId')";
-	$wpdb->query($sql3);
+	if($trackingId != ''){
+		$sql3 ="INSERT INTO  tracking_id(trackingId) VALUES ('$trackingId')";
+		$wpdb->query($sql3);
+	}
 }
 
 add_action('wp_head', 'add_influence');
