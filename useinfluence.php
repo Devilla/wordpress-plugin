@@ -167,9 +167,12 @@ function add_influence(){
 	}
 
 	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0' );
-  wp_add_inline_script( 'influence-inline-script', 'try{	new Influence({
-		trackingId: '$trackingId'
-		});}catch(e){}' );
+				echo "
+				new Influence({
+				trackingId: '$trackingId'
+				});
+				</script>
+						 ";
 	}
 
 run_useinfluence();
