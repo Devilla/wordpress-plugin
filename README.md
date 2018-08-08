@@ -110,6 +110,6 @@ UseInfluence installs a unique pixel code into your website to do all the amazin
 * updated readme
 
 
-6. Screenhots
+### Screenhots
 
     The screenshots are stored in the /assets directory.
