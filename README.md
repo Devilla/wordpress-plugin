@@ -3,7 +3,7 @@
 Requires at least: 3.0.1
 Tested up to: 3.4
 Stable tag: 4.3
-
+Tags: "wordpress plugin , influence"
 
 
 ## Description
@@ -88,6 +88,27 @@ UseInfluence installs a unique pixel code into your website to do all the amazin
 
  1.0
 * Consistent Useinfluence incorporation with all notice composes bolstered, selective WooCommerce warning write.
+* GPLv2 removed
+* tags and donation removed
+* INSERT query check
+* trackingId validation
+* ver fix
+* readme.txt
+* inline-enque
+* enqueue_scripts
+* animation and styles comment
+* analytics.js and note.css docs url
+* analytics.js and note.css docs
+* useinfluence.php
+* influence_screen
+* influence_menu
+* influence_menu
+* Update README.txt
+* Update README.txt
+* Merge pull request #2 from Devilla/newplugin
+* assets/ snapshots added
+* updated readme
+
 
 6. Screenhots
 
