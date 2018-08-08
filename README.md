@@ -18,19 +18,15 @@ Websites have seen over 200% conversion improvements after installing 'Influence
 
 More conversion-boosting Beta features are in the pipeline. Keep your seatbelts tight & get your Influence account now!
 
+We insert this universal tracking script which collects visitors data from the browser and sends to our servers where we process it and serve high quality notification.
 
-
-## 3rd Party or external cloud service
-
-The plugin stores a trackingId and embedding script on frontend with that unique trackingId provided by user from his/her account on our website .
+The plugin stores a trackingId and embedding script on frontend with that unique trackingId provided by user from his/her account on our website.
 
 All data goes to the influence-analytics.js file :
 
 URL :
 
 `` https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js ``
-
-We are using google as cloud storage for storing our "notification popup analytics file" in JavaScript format.
 
 
 ## Installation
