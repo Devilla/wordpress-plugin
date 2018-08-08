@@ -26,7 +26,7 @@ More conversion-boosting Beta features are in the pipeline. Keep your seatbelts 
 
  We are using google as cloud storage for storing our analytics file in JavaScript format and animation file in CSS format.
 
- https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js
+ URL : https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js
 
 
 
@@ -4703,6 +4703,10 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 
 
 == The default Animation and CSS style file : note.CSS ==
+
+URL : https://storage.googleapis.com/influence-197607.appspot.com/note.css
+
+
 
 @-webkit-keyframes slide {
     100% { left: 0; }
