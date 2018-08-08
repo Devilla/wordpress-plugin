@@ -28,7 +28,9 @@ The plugin stores a trackingId and embedding script on frontend with that unique
 
 All data goes to the influence-analytics.js file :
 
-URL : https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js
+URL : 
+
+`` https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js ``
 
 We are using google as cloud storage for storing our "notification popup analytics file" in JavaScript format.
 
