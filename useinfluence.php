@@ -84,14 +84,14 @@ function run_useinfluence() {
 /**
  * The hook action to register plugin menu  method.
  */
-add_action('admin_menu', 'basic_plugin_menu');
+add_action('admin_menu', 'influence_menu');
 
 /**
  * The core plugin menu  method that is used to define app name app id etc,
  * admin-control and public-facing.
  */
 
-function basic_plugin_menu(){
+function influence_menu(){
   $appName = 'Influence';
   $appID = 'influence-plugin';
   add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'plugin_admin_screen');
