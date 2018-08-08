@@ -165,14 +165,11 @@ function add_influence(){
 	{
 				$trackingId = $row->trackingId;
 	}
-				echo "
-				<script src='https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js'> </script>
-				<script>
-				new Influence({
-				trackingId: '$trackingId'
-				});
-				</script>
-						 ";
+
+	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0' );
+  wp_add_inline_script( 'influence-inline-script', 'try{	new Influence({
+		trackingId: '$trackingId'
+		});}catch(e){}' );
 	}
 
 run_useinfluence();
