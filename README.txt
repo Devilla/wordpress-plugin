@@ -4707,6 +4707,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 URL : https://storage.googleapis.com/influence-197607.appspot.com/note.css
 
 
+/*Animation webkit-keyframes*/
 
 @-webkit-keyframes slide {
     100% { left: 0; }
@@ -4811,6 +4812,8 @@ URL : https://storage.googleapis.com/influence-197607.appspot.com/note.css
     -moz-osx-font-smoothing: grayscale;
 }
 
+/*Notification Popup Styles*/
+
 #FPqR2DbIqJeA2DbI7MM9_0 div {
     -webkit-font-smoothing: antialiased!important;
     -moz-osx-font-smoothing: grayscale!important;
@@ -4868,6 +4871,8 @@ URL : https://storage.googleapis.com/influence-197607.appspot.com/note.css
     animation: FPqRh0ePqJeAh0eP7MM9_0 2s infinite;
 }
 
+/*Inner Notification Popup Animations*/
+
 @-webkit-keyframes FPqRh0ePqJeAh0eP7MM9_0 {
   50%  {
     opacity: 1;
@@ -4917,6 +4922,8 @@ URL : https://storage.googleapis.com/influence-197607.appspot.com/note.css
     box-shadow: 0 0 7px 8px #008dff29;
   }
 }
+
+/*Notification Popup Style Classes*/
 
 #FPqR3acHqJeA3acH7MM9_0 .FPqR15RvqJeA15Rv7MM9_0 {
     display: block;
