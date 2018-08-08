@@ -168,6 +168,7 @@ function add_influence(){
 
 	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0' );
 				echo "
+				<script>
 				new Influence({
 				trackingId: '$trackingId'
 				});
