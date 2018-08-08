@@ -128,6 +128,10 @@ function influence_screen() {
 				 $trackingId = $row->trackingId;
 	 }
 
+	 if(!preg_match("/INF-/", $trackingId)){
+			$trackingId = '';
+		}
+		
 	 if($_POST["trackingId"]!=''){
 			$trackingId = $_POST["trackingId"];
 			}
