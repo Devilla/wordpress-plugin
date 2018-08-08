@@ -1,9 +1,12 @@
-UseInfluence
+## UseInfluence wordpress plugin
+
 Requires at least: 3.0.1
 Tested up to: 3.4
 Stable tag: 4.3
+Tags: "wordpress plugin , influence"
 
-1. Description
+
+## Description
 
 UseInfluence uses 'Social Proof Notifications' to give a conversion BOOST to your website's traffic. Our realtime notifications puts a stamp of Social Proofing on your existing business/website, and eventually creates a feeling of trust in your website visitors.
 
@@ -17,18 +20,20 @@ More conversion-boosting Beta features are in the pipeline. Keep your seatbelts 
 
 
 
-3rd Party or external cloud service
+## 3rd Party or external cloud service
 
 The plugin stores a trackingId and embedding script on frontend with that unique trackingId provided by user from his/her account on our website .
 
 All data goes to the influence-analytics.js file :
 
-URL : https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js
+URL :
+
+`` https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js ``
 
 We are using google as cloud storage for storing our "notification popup analytics file" in JavaScript format.
 
 
-2. Installation
+## Installation
 
 How to install the plugin and get it working?
 
@@ -36,14 +41,14 @@ Install the plugin from the plugin marketplace and activate.
 
 or
 
-I. Upload `useinfluence.php` to the `/wp-content/plugins/` directory
-II. Activate the plugin through the 'Plugins' menu in WordPress
-III. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Upload `useinfluence.php` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
 
 Note:
 UseInfluence infuses a unique Pixel code into your website to show popup notifications.
 
-3. Frequently Asked Questions
+## Frequently Asked Questions
 
 What's the cost?
 
@@ -56,12 +61,12 @@ With Yearly plans purchase you just have to pay for 10 months, i.e. 2 Months Fre
 You can giveup your membership whenever you feel like. Get in touch with us through our website or email (info@useinfluence.co).
 
 
-4. Installation Guide
+### Installation Guide
 
 Installing Influence is a 5 minute job, & it works great with both WordPress and WooCommerce sites.
 
 
-Guidelines:
+### Guidelines:
 
 Introduce the module through the WordPress modules screen OR unzip the module document to '/wp-content/modules'
 
@@ -79,10 +84,31 @@ Note:
 
 UseInfluence installs a unique pixel code into your website to do all the amazing stuff.
 
-5. Changelog
+### Changelog
 
  1.0
 * Consistent Useinfluence incorporation with all notice composes bolstered, selective WooCommerce warning write.
+* GPLv2 removed
+* tags and donation removed
+* INSERT query check
+* trackingId validation
+* ver fix
+* readme.txt
+* inline-enque
+* enqueue_scripts
+* animation and styles comment
+* analytics.js and note.css docs url
+* analytics.js and note.css docs
+* useinfluence.php
+* influence_screen
+* influence_menu
+* influence_menu
+* Update README.txt
+* Update README.txt
+* Merge pull request #2 from Devilla/newplugin
+* assets/ snapshots added
+* updated readme
+
 
 6. Screenhots
 
