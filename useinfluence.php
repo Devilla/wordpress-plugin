@@ -94,7 +94,7 @@ add_action('admin_menu', 'influence_menu');
 function influence_menu(){
   $appName = 'Influence';
   $appID = 'influence-plugin';
-  add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'plugin_admin_screen');
+  add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'influence_screen');
 }
 
 /**
@@ -102,7 +102,7 @@ function influence_menu(){
  */
 
 
-function plugin_admin_screen() {
+function influence_screen() {
 	echo "<a href='https://useinfluence.co'>";
 	echo "<img class='top-logo' src='https://useinfluence.co/static/media/logo-influence-2.a5936714.png' width='180px' height='50px' style='margin-top:20px;' >";
 	echo "</a>";
