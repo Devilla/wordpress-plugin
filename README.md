@@ -30,7 +30,7 @@ Yes, our analytics code collect only relevant information from your website like
 
 Data Storage - All the data is being stored in Google Cloud servers located in "Central USA".
 
-Influence is GDPR compliant, which means all the Influence customers & users (direct or indirect) have the ultimate control over their data. Any user can choose to hide or delete its data from our servers, for doing this you have to write to our Support ('Support@useinfluence.co') using your email which you own & want us to delete/hide from our servers.
+Influence is GDPR compliant, which means that all the Influence customers & users (direct or indirect) have the ultimate control over their data. Any user can choose to hide or delete its data from our servers, for doing this you have to write to our Support ('Support@useinfluence.co') using the connected email-id which you own & want us to delete/hide from our servers.
 
 
 {Note: Influence notifications don't show any sensitive user information which may give away their identities}
