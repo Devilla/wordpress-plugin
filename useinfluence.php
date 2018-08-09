@@ -156,8 +156,6 @@ function influence_screen() {
 	}
 }
 
-add_action('wp_head', 'add_influence');
-
 add_action('wp_enqueue_scripts', 'add_influence');
 /**
  * The script tag header paste method which retreives user trakingId from database and pass to script,
