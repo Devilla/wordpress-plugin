@@ -28,6 +28,15 @@ URL :
 
 `` https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js ``
 
+Also, kindly check :
+
+###Terms of service 
+
+    https://useinfluence.co/terms-and-condtions
+
+###Privacy Policy
+
+    https://useinfluence.co/privacy-policy
 
 ## Installation
 
