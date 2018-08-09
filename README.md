@@ -30,11 +30,11 @@ URL :
 
 Also, kindly check :
 
-###Terms of service 
+Terms of service 
 
     https://useinfluence.co/terms-and-condtions
 
-###Privacy Policy
+Privacy Policy
 
     https://useinfluence.co/privacy-policy
 
