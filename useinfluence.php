@@ -162,6 +162,7 @@ add_action('wp_enqueue_scripts', 'add_influence');
  */
 
 function add_influence(){
+	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
 	global $trackingId;
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
@@ -169,8 +170,6 @@ function add_influence(){
 	{
 				$trackingId = $row->trackingId;
 	}
-
-	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
 	echo "
 	<script>
 	new Influence({
