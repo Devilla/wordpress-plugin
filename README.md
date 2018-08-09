@@ -38,7 +38,7 @@ Influence is GDPR compliant, which means that all the Influence customers & user
 5. What is Influence Tracking Pixel (trackingID?
 We insert this universal tracking script which collects visitors data from the website and sends it to our servers where we process it and serves it in high quality notifications.
 
-The plugin stores a trackingId and embedding script on frontend with that unique trackingId provided by user from its account on our website.
+The plugin stores a 'trackingId' provided by user from its account on our website and embedding script on frontend with that unique trackingId.
 
 All the data goes to 'influence-analytics.js' file :
 
