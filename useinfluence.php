@@ -171,7 +171,7 @@ function add_influence(){
 				$trackingId = $row->trackingId;
 	}
 
-	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
 	echo "
 	<script>
 	new Influence({
