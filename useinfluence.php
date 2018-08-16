@@ -10,12 +10,12 @@
  *
  * @link              https://useinfluence.co
  * @since             1.0.0
- * @package           Useinfluence
+ * @package           Influence
  *
  * @wordpress-plugin
- * Plugin Name:       Useinfluence
+ * Plugin Name:       Influence
  * Plugin URI:        https://github.com/InfluenceIO/wordpress-plugin
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Influence WordPress Plugin for TrackingId Input.
  * Version:           1.0.0
  * Author:            Target Solutions
  * Author URI:        https://useinfluence.co
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'INFLUENCE_PLUGIN_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
@@ -73,10 +73,118 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-useinfluence.php';
  *
  * @since    1.0.0
  */
+
 function run_useinfluence() {
 
 	$plugin = new Useinfluence();
 	$plugin->run();
 
 }
+
+/**
+ * The hook action to register plugin menu  method.
+ */
+add_action('admin_menu', 'influence_menu');
+
+/**
+ * The core plugin menu  method that is used to define app name app id etc,
+ * admin-control and public-facing.
+ */
+
+function influence_menu(){
+  $appName = 'Influence';
+  $appID = 'influence-plugin';
+  add_menu_page($appName, $appName, 'administrator', $appID . '-top-level', 'influence_screen');
+}
+
+/**
+ * The core pluginAdminScreen method that is used to define trackingId as input for app,
+ */
+
+
+function influence_screen() {
+	echo "<a href='https://useinfluence.co'>";
+	echo "<img class='top-logo' src='https://useinfluence.co/static/media/logo-influence-2.a5936714.png' width='180px' height='50px' style='margin-top:20px;' >";
+	echo "</a>";
+	echo "<br />";
+	echo "<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -";
+	echo "<a href='https://useinfluence.co/signup'>";
+	echo "<strong>signup here!</strong>";
+	echo "</a>";
+	echo "</h3>";
+	echo "<h2>Please enter your Tracking ID</h2>";
+	echo "<form action='' method='POST'>";
+        echo "<input type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
+	echo "<br /> <hr />";
+	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
+	echo "<br />";
+	echo "<a href='https://useinfluence.co/campaigns/scripts' target='_blank'>Where is my Tracking ID ?</a>";
+	echo "<form>";
+
+ 	 global $trackingId;
+	 global $wpdb;
+
+	 $query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
+	 foreach($query as $row)
+	 {
+				 $trackingId = $row->trackingId;
+	 }
+
+	 if(!preg_match("/INF-/", $trackingId)){
+			$trackingId = '';
+		}
+
+	 if($_POST["trackingId"]!=''){
+			$trackingId = $_POST["trackingId"];
+			}
+
+	/**
+	 * WordPress database queries
+		*/
+
+
+
+	$sql1 = "CREATE TABLE tracking_id (
+	  id mediumint(9) NOT NULL AUTO_INCREMENT,
+	  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+	  trackingId varchar(20) NOT NULL,
+	  PRIMARY KEY  (id)
+	)";
+
+	$wpdb->query($sql1);
+	if($trackingId != ''){
+		$sql3 ="INSERT INTO  tracking_id(trackingId) VALUES ('$trackingId')";
+		$wpdb->query($sql3);
+	}
+}
+
+add_action('wp_enqueue_scripts', 'add_influence');
+add_action('wp_head', 'add_trackingId');
+/**
+ * The script tag header paste method which retreives user trakingId from database and pass to script,
+ */
+
+function add_influence(){
+	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
+}
+
+function add_trackingId(){
+	global $trackingId;
+	global $wpdb;
+	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
+	foreach($query as $row)
+	{
+				$trackingId = $row->trackingId;
+	}
+	echo "
+	<script>
+	new Influence({
+	trackingId: '$trackingId'
+	});
+	</script>
+			 ";
+	}
+
 run_useinfluence();
+
+  ?>
