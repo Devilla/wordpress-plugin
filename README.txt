@@ -1,114 +1,116 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: https://useinfluence.co
-Tags: comments, spam
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=== Useinfluence ===
+Contributors: useinfluence
+Donate link: https://useinfluence.co/pricing
+Tags: woocommerce, social proof, notifications, marketing, popups, promotion, sales, conversion, orders
+Requires PHP: 5.2
+Requires at least: 3.1.0
+Tested up to: 4.9.6
+Stable tag: 1.0.0
+License: Open Source
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+UseInfluence uses 'Social Proof Notifications' to give a conversion BOOST to your website's traffic. Our realtime notifications puts a stamp of Social Proofing on your online business/website, and eventually creates a feeling of trust in your website visitors.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+It's a No-Brainer for conversions which runs automatically on your website!
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+What are Influence Notifications? Influence uses the real time analytics data picked from your website & re-render it in the form of notifications.These are classified into 'Recent User Activity (two types)' & 'Live Visitor Activity'. You can set the 'Styles' & 'Behaviors' of your notification popups from Influence dashboard. Everything is fully customizeable! Add-on: Influence Analytics - Inside the dashboard you can also monitor your website user's analytics, conversion % & several other metrics.
 
-A few notes about the sections above:
+How does these notifications help? Think of this as a 'Social stamping' by your existing customers/users which is flashed to your new prospective customers. After seeing the activities of existing users, your website visitors are more likely to convert & make a purchase. It's a scientifically proven psychological phenomenon for customer buying behaviours.
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+What are the benefits? Some websites have seen over 200% conversion improvements after installing 'Influence'. On an average Influence users measure about 25-30% improvements over their existing conversions.
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+Does Influence collect & store any data from the websites (or of website users)? Yes, our analytics code collect only the relevant information from your website like visitor emails, visitor journey, location, time-stamps etc., which are essential to the product feature delivery. NO sensitive information is being picked or stored by Influence. Data Storage - All the data is being stored in Google Cloud servers located in "Central USA". Influence is GDPR compliant, which means that all the Influence customers & users (direct or indirect) have the ultimate control over their data. Any user can choose to hide or delete its data from our servers, for doing this you have to write to our Support ('Support@useinfluence.co') using the connected email-id which you own & want us to delete/hide from our servers.
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+{Note: Influence notifications don't show any sensitive user information which may give away their identities}
+
+What is Influence Tracking Pixel (trackingID? We insert this universal tracking script which collects information from the website and sends it to our servers where we process it and serves it in high quality notifications & analytics.
+
+About Influence's Wordpress Plugin. Influence plugin uses a unique 'TrackingId' which can be picked from the "Website's Campaign" created inside user's Influence account.
+
+All the data moves using 'influence-analytics.js' file which is hosted on our secured Google Cloud Storage (using Google APIs as a service):
+https://www.youtube.com/watch?v=ts3IpB3Appo
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+Useinfluence plugin installation is as as easy as it gets, it works with both Wordpress and WooCommerce on your websites.
 
-e.g.
+Useinfluence is a subscription service, starting at $0 per month (that's right we offer a free plan), subscription 
+management is available in the ProveSource website (click the logo in the settings page).
 
-1. Upload `useinfluence.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+Instructions:
+
+1. Install the plugin through the Wordpress plugins screen OR unzip the plugin archive to '/wp-content/plugins'
+2. In the Wordpress 'Plugins' page, activate the plugin.
+3. Select "Useinfluence" menu item on the sidebar.
+4. Copy over your tracking code from Useinfluence dashboard and hit "Save".
+5. In the Useinfluence dashboard hit "Verify" and follow the wizard 
+6. Done. Sit back and watch how social proof boosts your sales!
+
+Notice:
+
+* Useinfluence inject the ProveSource javascript code to your website, to display notifications.
+
+* Useinfluence is a cloud based service and the plugin communicates with the ProveSource servers, 
+including remote webhook calls, data collected as mentioned above.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+What's the cost?
 
-An answer to that question.
+We have four plans, each with 7 days free trial. Depending on your website's traffic you can choose from 'Startup ($17)', 'Small Business ($48)', 'Advanced ($86)' & 'Enterprise ($171)'. With Yearly plans purchase you just have to pay for 10 months, i.e. 2 Months Free.
 
-= What about foo bar? =
+How do I revoke my Influence membership?
 
-Answer to foo bar dilemma.
+You can giveup your membership whenever you feel like. Get in touch with us through our website or email (info@useinfluence.co). After revoking your membership, all your data will be wiped off from our cloud storage.
+
+Can I temporarily disable my account for an indefinite period?
+
+Yes you can! Please contact our support for more information. (support@useinfluence.co)
+
+Also, please checkout our:
+
+Terms of service
+
+https://useinfluence.co/terms-and-condtions
+Privacy Policy
+
+https://useinfluence.co/privacy-policy
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Social Proof in action
+2. More Social Proof
+3. Notification types
+4. Simple intuitive dashboard
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
+= 1.0.x =
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+Consistent Useinfluence incorporation with all notice composes bolstered, selective WooCommerce warning write.
+GPLv2 removed
+tags and donation removed
+INSERT query check
+trackingId validation
+ver fix
+readme.txt
+inline-enque
+enqueue_scripts
+animation and styles comment
+analytics.js and note.css docs url
+analytics.js and note.css docs
+useinfluence.php
+influence_screen
+influence_menu
+influence_menu
+Update README.txt
+Update README.txt
+Merge pull request #2 from Devilla/newplugin
+assets/ snapshots added
+updated readme
+
 
 == Upgrade Notice ==
 
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+All versions are backwards compatible and included in your plan.
