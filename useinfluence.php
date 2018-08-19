@@ -104,7 +104,7 @@ function influence_menu(){
 
 function influence_screen() {
 	echo "<a href='https://useinfluence.co'>";
-	echo "<img class='top-logo' src='https://useinfluence.co/static/media/logo-influence-2.a5936714.png' width='180px' height='50px' style='margin-top:20px;' >";
+	echo "<img class='top-logo' src='/assets/Influence-website-2.png' width='180px' height='50px' style='margin-top:20px;' >";
 	echo "</a>";
 	echo "<br />";
 	echo "<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -";
@@ -159,7 +159,7 @@ function influence_screen() {
 }
 
 add_action('wp_enqueue_scripts', 'add_influence');
-add_action('wp_head', 'add_trackingId');
+add_action('wp_head', 'add_tracking_id');
 /**
  * The script tag header paste method which retreives user trakingId from database and pass to script,
  */
@@ -168,7 +168,7 @@ function add_influence(){
 	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
 }
 
-function add_trackingId(){
+function add_tracking_id(){
 	global $trackingId;
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
