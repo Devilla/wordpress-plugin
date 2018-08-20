@@ -103,23 +103,25 @@ function influence_menu(){
 
 
 function influence_screen() {
-	echo "<a href='https://useinfluence.co'>";
-	echo '<img src="<?php echo plugin_dir_url(__FILE__) . 'assets/Influence-website-2.png' ?>" width="180px" height="50px" style="margin-top:20px;" >';
-	echo "</a>";
-	echo "<br />";
-	echo "<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -";
-	echo "<a href='https://useinfluence.co/signup'>";
-	echo "<strong>signup here!</strong>";
-	echo "</a>";
-	echo "</h3>";
-	echo "<h2>Please enter your Tracking ID</h2>";
-	echo "<form action='' method='POST'>";
-        echo "<input type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>";
-	echo "<br /> <hr />";
-	echo "<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>";
-	echo "<br />";
-	echo "<a href='https://useinfluence.co/campaigns/scripts' target='_blank'>Where is my Tracking ID ?</a>";
-	echo "<form>";
+	?>
+	<a href='https://useinfluence.co'>
+	<img src="<?php echo plugin_dir_url(__FILE__) . 'assets/Influence-website-2.png' ?>" width="180px" height="50px" style="margin-top:20px;" />
+	</a>
+	<br />
+	<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -
+	<a href='https://useinfluence.co/signup'>
+	<strong>signup here!</strong>
+	</a>
+	</h3>
+  <h2>Please enter your Tracking ID</h2>
+	<form action='' method='POST'>
+  <input type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>
+	<br /> <hr />
+	<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>
+	<br />
+	<a href='https://useinfluence.co/campaigns/scripts' target='_blank'>Where is my Tracking ID ?</a>
+	<form>
+	<?php
 
  	 global $trackingId;
 	 global $wpdb;
@@ -161,12 +163,16 @@ function influence_screen() {
 add_action('wp_enqueue_scripts', 'add_influence');
 add_action('wp_head', 'add_tracking_id');
 /**
- * The script tag header paste method which retreives user trakingId from database and pass to script,
+ * The script tag header method which retreives trakingId use it inside influence script
  */
 
 function add_influence(){
 	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
 }
+
+/**
+ * The script tag header paste method which retreives user trakingId from database and pass to script
+ */
 
 function add_tracking_id(){
 	global $trackingId;
