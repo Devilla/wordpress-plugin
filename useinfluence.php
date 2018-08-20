@@ -115,7 +115,7 @@ function influence_screen() {
 	</h3>
   <h2>Please enter your Tracking ID</h2>
 	<form action='' method='POST'>
-  <input type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>
+  <input id='trackingId' type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>
 	<br /> <hr />
 	<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>
 	<br />
@@ -136,8 +136,9 @@ function influence_screen() {
 			$trackingId = '';
 		}
 
-	 if($_POST["trackingId"]!=''){
-			$trackingId = $_POST["trackingId"];
+	 if($_POST['trackingId']!==''){
+			$trackingId = sanitize_text_field($_POST['trackingId']);
+			update_post_meta($post->ID, 'trackingId', $trackingId);
 			}
 
 	/**
