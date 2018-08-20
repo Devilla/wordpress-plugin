@@ -105,7 +105,7 @@ function influence_menu(){
 function influence_screen() {
 	?>
 	<a href='https://useinfluence.co'>
-	<img src="<?php echo plugin_dir_url(__FILE__) . 'assets/Influence-website-2.png' ?>" width="180px" height="50px" style="margin-top:20px;" />
+	<img src="<?php echo plugin_dir_url(__FILE__) . 'assets/logo-influence-2.a5936714.png' ?>" width="180px" height="50px" style="margin-top:20px;" />
 	</a>
 	<br />
 	<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -
