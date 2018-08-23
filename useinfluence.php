@@ -174,13 +174,6 @@ add_action('wp_head', 'add_tracking_id');
 
 function add_influence(){
 	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
-}
-
-/**
- * The script tag header paste method which retreives user trakingId from database and pass to script
- */
-
-function add_tracking_id(){
 	global $trackingId;
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
@@ -195,6 +188,14 @@ function add_tracking_id(){
 	});
 	</script>
 			 ";
+}
+
+/**
+ * The script tag header paste method which retreives user trakingId from database and pass to script
+ */
+
+function add_tracking_id(){
+
 	}
 
 run_useinfluence();
