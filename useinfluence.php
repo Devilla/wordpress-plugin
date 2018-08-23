@@ -165,9 +165,9 @@ function influence_screen() {
 		$wpdb->query($sql3);
 	}
 }
-
-add_action('wp_enqueue_scripts', 'add_influence');
 add_action('wp_head', 'add_tracking_id');
+add_action('wp_enqueue_scripts', 'add_influence');
+
 /**
  * The script tag header method which retreives trakingId use it inside influence script
  */
