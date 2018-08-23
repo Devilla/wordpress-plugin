@@ -173,6 +173,7 @@ add_action('wp_head', 'add_tracking_id');
  */
 
 function add_influence(){
+	esc_url_raw("https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js",null);
 	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
 }
 
