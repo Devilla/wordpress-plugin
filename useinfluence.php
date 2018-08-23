@@ -104,12 +104,16 @@ function influence_menu(){
 
 function influence_screen() {
 	?>
+
+	<?php esc_url_raw("https://useinfluence.co",null);?>
 	<a href='<?php esc_url_raw("https://useinfluence.co",null);?>'>
-	<img src="<?php sanitize_file_name(plugin_dir_url(__FILE__) . 'assets/logo-influence-2.a5936714.png'); ?>" width="180px" height="50px" style="margin-top:20px;" />
+	<img src="<?php echo plugin_dir_url(__FILE__) . 'assets/logo-influence-2.a5936714.png' ?>" width="180px" height="50px" style="margin-top:20px;" />
 	</a>
 	<br />
 	<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -
-	<a href='<?php esc_url_raw("https://useinfluence.co/signup",null);?>'>
+
+	<?php esc_url_raw("https://useinfluence.co/signup",null);?>
+	<a href='https://useinfluence.co/signup'>
 	<strong>signup here!</strong>
 	</a>
 	</h3>
@@ -119,7 +123,8 @@ function influence_screen() {
 	<br /> <hr />
 	<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>
 	<br />
-	<a href='<?php esc_url_raw("https://useinfluence.co/campaigns/scripts",null);?>' target='_blank'>Where is my Tracking ID ?</a>
+	<?php esc_url_raw("https://useinfluence.co/campaigns/scripts",null);?>
+	<a href='https://useinfluence.co/campaigns/scripts' target='_blank'>Where is my Tracking ID ?</a>
 	<form>
 	<?php
 
@@ -183,6 +188,7 @@ function add_tracking_id(){
 	 * Sanitize an OrderBy Query
 	 */
 	sanitize_sql_orderby( $query );
+
 	foreach($query as $row)
 	{
 				$trackingId = $row->trackingId;
