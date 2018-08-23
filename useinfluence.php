@@ -165,9 +165,9 @@ function influence_screen() {
 		$wpdb->query($sql3);
 	}
 }
-add_action('wp_head', 'add_tracking_id');
-add_action('wp_enqueue_scripts', 'add_influence');
 
+add_action('wp_enqueue_scripts', 'add_influence');
+add_action('wp_head', 'add_tracking_id');
 /**
  * The script tag header method which retreives trakingId use it inside influence script
  */
@@ -184,11 +184,6 @@ function add_tracking_id(){
 	global $trackingId;
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
-	/**
-	 * Sanitize an OrderBy Query
-	 */
-	sanitize_sql_orderby( $query );
-
 	foreach($query as $row)
 	{
 				$trackingId = $row->trackingId;
