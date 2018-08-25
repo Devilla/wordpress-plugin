@@ -167,7 +167,7 @@ function influence_screen() {
 }
 
 add_action('wp_enqueue_scripts', 'add_influence');
-add_action('wp_head', 'add_tracking_id');
+add_action('wp_head', 'useinfluence_trackingid');
 /**
  * The script tag header method which retreives trakingId use it inside influence script
  */
@@ -181,7 +181,7 @@ function add_influence(){
  * The script tag header paste method which retreives user trakingId from database and pass to script
  */
 
-function add_tracking_id(){
+function useinfluence_trackingid(){
 	global $trackingId;
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
