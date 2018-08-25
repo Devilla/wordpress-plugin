@@ -104,21 +104,26 @@ function influence_menu(){
 
 function influence_screen() {
 	?>
-	<a href='https://useinfluence.co'>
+
+	<?php esc_url_raw("https://useinfluence.co",null);?>
+	<a href='<?php esc_url_raw("https://useinfluence.co",null);?>'>
 	<img src="<?php echo plugin_dir_url(__FILE__) . 'assets/logo-influence-2.a5936714.png' ?>" width="180px" height="50px" style="margin-top:20px;" />
 	</a>
 	<br />
 	<h3 class='describe' style='font-family:sans-serif;padding: 10px;border-left:  5px solid  #999;background: #99999930;'>If you don't have an account -
+
+	<?php esc_url_raw("https://useinfluence.co/signup",null);?>
 	<a href='https://useinfluence.co/signup'>
 	<strong>signup here!</strong>
 	</a>
 	</h3>
   <h2>Please enter your Tracking ID</h2>
 	<form action='' method='POST'>
-  <input type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>
+  <input id='trackingId' type='text' name='trackingId' class='api' style='padding: 5px 10px; border-radius:5px;' placeholder='e.g. INF-xxxxxxxx'></input>
 	<br /> <hr />
 	<input type='submit' class='submit' style='padding: 5px 10px ;cursor:pointer; color:#fff; border-radius:5px;background-color:#097fff' value='Save'></input>
 	<br />
+	<?php esc_url_raw("https://useinfluence.co/campaigns/scripts",null);?>
 	<a href='https://useinfluence.co/campaigns/scripts' target='_blank'>Where is my Tracking ID ?</a>
 	<form>
 	<?php
@@ -136,8 +141,9 @@ function influence_screen() {
 			$trackingId = '';
 		}
 
-	 if($_POST["trackingId"]!=''){
-			$trackingId = $_POST["trackingId"];
+	 if($_POST['trackingId']!==''){
+			$trackingId = sanitize_text_field($_POST['trackingId']);
+			update_post_meta($post->ID, 'trackingId', $trackingId);
 			}
 
 	/**
@@ -161,12 +167,13 @@ function influence_screen() {
 }
 
 add_action('wp_enqueue_scripts', 'add_influence');
-add_action('wp_head', 'add_tracking_id');
+add_action('wp_head', 'useinfluence_trackingid');
 /**
  * The script tag header method which retreives trakingId use it inside influence script
  */
 
 function add_influence(){
+	esc_url_raw("https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js",null);
 	wp_enqueue_script( 'influence-script', 'https://storage.googleapis.com/influence-197607.appspot.com/influence-analytics.js', array(), '1.0.0', false );
 }
 
@@ -174,7 +181,7 @@ function add_influence(){
  * The script tag header paste method which retreives user trakingId from database and pass to script
  */
 
-function add_tracking_id(){
+function useinfluence_trackingid(){
 	global $trackingId;
 	global $wpdb;
 	$query = $wpdb->get_results("SELECT trackingId FROM tracking_id ORDER BY ID DESC LIMIT 1", OBJECT);
