@@ -28,15 +28,14 @@ What is Influence Tracking Pixel (trackingID? We insert this universal tracking 
 
 About Influence's Wordpress Plugin. Influence plugin uses a unique 'TrackingId' which can be picked from the "Website's Campaign" created inside user's Influence account.
 
-All the data moves using 'influence-analytics.js' file which is hosted on our secured Google Cloud Storage (using Google APIs as a service):
-https://www.youtube.com/watch?v=ts3IpB3Appo
+All the data moves using 'influence-analytics.js' file which is hosted on our secured Google Cloud Storage (using Google APIs as a service).
 
 == Installation ==
 
 Useinfluence plugin installation is as as easy as it gets, it works with both Wordpress and WooCommerce on your websites.
 
-Useinfluence is a subscription service, starting at $0 per month (that's right we offer a free plan), subscription 
-management is available in the ProveSource website (click the logo in the settings page).
+Useinfluence is a subscription service, starting at $0 per month (that's right we offer a free plan), subscription
+management is available in the UseInfluence website (click the logo in the settings page).
 
 Instructions:
 
@@ -44,14 +43,14 @@ Instructions:
 2. In the Wordpress 'Plugins' page, activate the plugin.
 3. Select "Useinfluence" menu item on the sidebar.
 4. Copy over your tracking code from Useinfluence dashboard and hit "Save".
-5. In the Useinfluence dashboard hit "Verify" and follow the wizard 
+5. In the Useinfluence dashboard hit "Verify" and follow the wizard
 6. Done. Sit back and watch how social proof boosts your sales!
 
 Notice:
 
-* Useinfluence inject the ProveSource javascript code to your website, to display notifications.
+* Useinfluence inject the UseInfluence javascript code to your website, to display notifications.
 
-* Useinfluence is a cloud based service and the plugin communicates with the ProveSource servers, 
+* Useinfluence is a cloud based service and the plugin communicates with the UseInfluence servers,
 including remote webhook calls, data collected as mentioned above.
 
 == Frequently Asked Questions ==
